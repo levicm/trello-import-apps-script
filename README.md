@@ -21,7 +21,7 @@ var api_token = "your_api_token";
 var board_id = "your_board_id";
 ```
 7. Salve o arquivo (Ctrl+S)
-8. Informe um nome, por exemplo: "Trello import"
+8. Informe um nome para o novo projeto, por exemplo: "Trello import"
 9. Feche a planilha e abra novamente. a função onOpen() será executada e o menu Trello aparecerá como última opção do menu principal
 
 ## Executando
