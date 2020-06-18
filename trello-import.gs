@@ -1,14 +1,16 @@
+// called on sheet open - add menu option
 function onOpen() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var menuEntries = [ {name: "Update from Trello", functionName: "main"},];
   ss.addMenu("Trello", menuEntries);
-
 }
 
-// trello variables
+// trello credentials
 var api_key = "your_api_key";
 var api_token = "your_api_token";
 var board_id = "your_board_id";
+
+// global variables
 var url = "https://api.trello.com/1/";
 var key_and_token = "key="+api_key+"&token="+api_token;
 
@@ -26,7 +28,7 @@ function main() {
      str_lists = str_lists + lists[i].name + "\r\n";
   }
 
-  var ui = SpreadsheetApp.getUi(); // Same variations.
+  var ui = SpreadsheetApp.getUi();
   var result = ui.prompt(
       'Choose a Trello list',
       'Please inform the desired list name, or leave empty for all lists:\n\n' + str_lists + "\n",
