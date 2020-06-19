@@ -1,3 +1,7 @@
+//
+// Based on Robert Gebhardt script (https://stackoverflow.com/users/4847886/robert-gebhardt)
+//
+
 // trello credentials
 var api_key = "your_api_key";
 var api_token = "your_api_token";
