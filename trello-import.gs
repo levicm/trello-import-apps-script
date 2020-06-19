@@ -1,10 +1,3 @@
-// called on sheet open - add menu option
-function onOpen() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var menuEntries = [ {name: "Update from Trello", functionName: "main"},];
-  ss.addMenu("Trello", menuEntries);
-}
-
 // trello credentials
 var api_key = "your_api_key";
 var api_token = "your_api_token";
@@ -13,6 +6,13 @@ var board_id = "your_board_id";
 // global variables
 var url = "https://api.trello.com/1/";
 var key_and_token = "key="+api_key+"&token="+api_token;
+
+// called on sheet open - add menu option
+function onOpen() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var menuEntries = [ {name: "Update from Trello", functionName: "main"},];
+  ss.addMenu("Trello", menuEntries);
+}
 
 //called by google docs on the menu click
 function main() {
