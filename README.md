@@ -1,33 +1,33 @@
 # trello-import-apps-script
-Google Apps Script para importar cartões do Trellopara uma Planilha do Google
+Google Apps Script to import Trello cards into a Google Spreadsheet
 
 
 ## Pré-requisitos
-Para o script funcionar é necessário:
-* Obter a chave e o token de API (https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/)
-* Obter o id do quadro do Trello (https://community.atlassian.com/t5/Trello-questions/How-to-get-Trello-Board-ID/qaq-p/1347525)
+Before installing and using the script it is necessary to:
+* Get the API key and API token (https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/)
+* Get the Trello board id (https://community.atlassian.com/t5/Trello-questions/How-to-get-Trello-Board-ID/qaq-p/1347525)
 
 ## Instalando
-1. Abra o arquivo trello-import.gs
-2. Copie o conteúdo do script
-3. Abra a planilha do Google
-4. Acesse o menu Ferramentas > Editor de Script
-5. Cole o código do script dentro do novo arquivo de script criado
-6. Substitua o conteúdo das variáveis de autenticação:
+1. Open the trello-import.gs file
+2. Copy the script content
+3. Open the Google spreadsheet
+4. Access the menu: Tools > Script Editor 
+5. Paste the script code into the newly created script file
+6. Replace the content of the authentication variables:
 ```sh
 // trello variables
 var api_key = "your_api_key";
 var api_token = "your_api_token";
 var board_id = "your_board_id";
 ```
-7. Salve o arquivo (Ctrl+S)
-8. Informe um nome para o novo projeto, por exemplo: "Trello import"
-9. Feche a planilha e abra novamente. a função onOpen() será executada e o menu Trello aparecerá como última opção do menu principal
+7. Save the file (Ctrl + S)
+8. Enter a name for the new project, for example: "Trello import"
+9. Close the spreadsheet and open it again. The onOpen() script function will be executed and after a couple seconds the Trello menu will appear as the last option on the main menu
 
-## Executando
-1. Acesse o menu Trello > Update from Trello
-2. Um diálogo aparecerá informando as listas disponíveis. Escolha uma das listas preenchendo seu nome, ou deixe em branco para importar todas as listas
-3. O script adicionará linhas ao final da planilha com o conteúdo: 
+## Running
+1. Access the menu: Trello > Update from Trello
+2. A dialog will appear informing you of the available lists. Choose one of the lists by filling the list name, or leave it blank to import all lists
+3. The script will add lines to the end of the spreadsheet with the content:
 ```sh
-[Nome_da_pessoa, Nome_do_cartão, Data_de_criação, Data_limite, null, Descrição, Nome_da_lista]
+[Member_Name, Card_Name, Creation_Date, Due_Date, null, Card_Description, List_Name]
 ```
