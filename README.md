@@ -1,13 +1,14 @@
 # trello-import-apps-script
-Google Apps Script to import Trello cards into a Google Spreadsheet
+Google Apps Script to import Trello cards into a Google Spreadsheet.
+Based on Robert Gebhardt script (https://stackoverflow.com/users/4847886/robert-gebhardt). 
 
 
-## Pré-requisitos
+## Prerequisites
 Before installing and using the script it is necessary to:
 * Get the API key and API token (https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/)
 * Get the Trello board id (https://community.atlassian.com/t5/Trello-questions/How-to-get-Trello-Board-ID/qaq-p/1347525)
 
-## Instalando
+## Installing
 1. Open the trello-import.gs file
 2. Copy the script content
 3. Open the Google spreadsheet
